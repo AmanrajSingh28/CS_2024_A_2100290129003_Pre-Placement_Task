@@ -10,7 +10,7 @@
 # WEEK 3 Task
 # Binary Search, Binary Heap and Hash Table based questions implementation
 
-# WEER 4 Task
+# WEEK 4 Task
 # Recursion, Backtracking and Dynamic Programming based questions
 # 0-1 Knapsack, LCS Algo, MCM Algo, Unbound Knapsack, LIS Algo
 
