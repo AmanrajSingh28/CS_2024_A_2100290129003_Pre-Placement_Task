@@ -1,0 +1,72 @@
+//////////////////////////////////// Insert at begin of LinkedList //////////////////////////////////
+
+struct node
+{
+int data;
+node *next;
+
+node(int x)
+{
+         data=x; // assigning value to data variable
+         next=NULL; // initially next is NULL
+}
+};
+
+node *insertbegin(node *head, int data)
+{
+node *temp = new node(data);
+temp -> next = head;
+return temp; 
+}
+
+////////////////////////////////////////// Insert at nth position of LinkedList /////////////////////////////////////
+
+node *insertpos(node *head, int position, int data)
+{
+node *temp = new node(data);
+
+if(position == 1)
+{
+         temp -> next = head;
+         return temp;
+}
+
+node *curr = head;
+
+for(int i = 1;i <= position-2 && curr != NULL; i++)
+{
+         curr = curr -> next;
+}
+
+if(curr == NULL)
+{
+         return head;
+}
+
+//Insertion and returning head
+temp -> next = curr -> next;
+curr -> next = temp;
+return head;
+}
+
+////////////////////////////////////// Insert at end of LinkedList ////////////////////////////////////
+node *insertend(node *head, int data)
+{
+node *temp = new node(data);
+
+if(head == NULL)
+{
+         return temp;
+}
+
+node *curr = head;
+
+while(curr->next != NULL)
+{
+         curr = curr -> next;
+}
+
+curr -> next = temp;
+temp -> next = NULL;
+return head;
+}
